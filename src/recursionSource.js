@@ -74,11 +74,7 @@ var tagCount = function(givenDOM, tagName) {
 // Takes a ordered list of integers as its argument. 
 // Should start from the middle and move outwards. 
 // For inspiration: http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html
-<<<<<<< HEAD
-var searchBinary = function(orderedList, target){
-=======
 var searchBinary = function(orderedList, item){
->>>>>>> bddc63911c2963c0a33bb9127354880bd4f30fec
 	//Your code here
 	var result = null;
     var lo = 0;
@@ -87,27 +83,27 @@ var searchBinary = function(orderedList, item){
     //sort (if needed)
     orderedList.sort((a,b) => a - b);
 
-    var _binarySearch = (modArray, hi, lo, target) => {                
+    var _binarySearch = (modArray, hi, lo, item) => {                
         //median
         var median = lo + Math.round((hi - lo) / 2);
 
-        if (!(_.contains(modArray, target))) {
+        if (!(_.contains(modArray, item))) {
             result = false;
-        } else if ((modArray[median] - target) === 0) {                                        
+        } else if ((modArray[median] - item) === 0) {                                        
             result = median;                                    
             console.log('result ' , result);
         } else {                    
-            if (modArray[median] < target) {                        
+            if (modArray[median] < item) {                        
                 lo = median;                        
-                result = _binarySearch(modArray, hi, lo, target);                                                
-            } else if (modArray[median] > target) {
+                result = _binarySearch(modArray, hi, lo, item);                                                
+            } else if (modArray[median] > item) {
                 hi = median;
-                result = _binarySearch(modArray, hi, lo, target);
+                result = _binarySearch(modArray, hi, lo, item);
             }
         }
         return result;                
     };
-    _binarySearch(orderedList, hi, lo, target);
+    _binarySearch(orderedList, hi, lo, item);
     return result; 
 };
 
