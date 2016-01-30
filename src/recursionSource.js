@@ -74,7 +74,11 @@ var tagCount = function(givenDOM, tagName) {
 // Takes a ordered list of integers as its argument. 
 // Should start from the middle and move outwards. 
 // For inspiration: http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html
+<<<<<<< HEAD
 var searchBinary = function(orderedList, target){
+=======
+var searchBinary = function(orderedList, item){
+>>>>>>> bddc63911c2963c0a33bb9127354880bd4f30fec
 	//Your code here
 	var result = null;
     var lo = 0;
